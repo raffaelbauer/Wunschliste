@@ -42,12 +42,8 @@
         li {
             background-color: #f1faee;
             margin: 10px 0;
-            padding: 15px;
             border-radius: 8px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
             transition: background-color 0.3s;
         }
 
@@ -55,17 +51,6 @@
             background-color: #a8dadc;
         }
 
-        a {
-            color: #2a9d8f;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Stil für die klickbaren Listenelemente */
         a.list-item {
             display: flex;
             justify-content: space-between;
@@ -76,10 +61,20 @@
             padding: 15px;
             border-radius: 8px;
             transition: background-color 0.3s;
+            width: 100%;
         }
 
         a.list-item:hover {
             background-color: #a8dadc;
+        }
+
+        /* Stil für die Preise in der Wunschliste */
+        a.list-item span:last-child {
+            font-weight: bold;
+            font-size: 18px;
+            color: #2a9d8f;
+            text-align: right;
+            min-width: 100px;
         }
     </style>
 </head>
@@ -94,31 +89,31 @@
         <li>
             <a class="list-item" href="https://www.evobuys.com/">
                 <span>HumidiExpress - Essential oil diffuser train</span>
-                <span>CHF 45.00</span>
+                <span>45,00 CHF</span>
             </a>
         </li>
         <li>
             <a class="list-item" href="https://www.brack.ch/nintendo-switch-rot-blau-1485182">
                 <span>Nintendo Switch</span>
-                <span>CHF 268.00</span>
+                <span>268,00 CHF</span>
             </a>
         </li>
         <li>
             <a class="list-item" href="https://www.apple.com/ch-de/shop/buy-iphone/iphone-16-pro/6,3%22-display-1tb-titan-schwarz">
                 <span>Neuestes iPhone</span>
-                <span>CHF 1'549.00</span>
+                <span>1'549,00 CHF</span>
             </a>
         </li>
         <li>
             <a class="list-item" href="https://www.mediamarkt.ch/de/product/_philips-43pus830912-tv-flat-43-108-cm-uhd-4k-smart-tv-ambilight-2263500.html">
                 <span>Fernseher</span>
-                <span>CHF 479.95</span>
+                <span>479,95 CHF</span>
             </a>
         </li>
         <li>
             <a class="list-item" href="https://www.mediamarkt.ch/de/product/_xiaomi-smart-air-purifier-4-compact-white-2160464.html">
                 <span>Luftreiniger</span>
-                <span>CHF 99.95</span>
+                <span>99,95 CHF</span>
             </a>
         </li>
         <li>
