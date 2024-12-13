@@ -8,7 +8,6 @@
         /* Allgemeine Stile für die Seite */
         body {
             font-family: 'Verdana', sans-serif;
-            background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/snowflakes.png');
             background-color: #ffebcd;
             margin: 0;
             padding: 0;
@@ -24,7 +23,7 @@
             padding: 40px 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             position: relative;
-            z-index: 2; /* Stellen sicher, dass der Header über den Schneeflocken liegt */
+            z-index: 2; /* Stellen sicher, dass der Header über dem Content liegt */
         }
 
         header h1 {
@@ -56,7 +55,7 @@
             border-radius: 20px;
             border: 5px dashed #e74c3c;
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            z-index: 1; /* Content bleibt unter den Schneeflocken */
+            z-index: 1; /* Content bleibt unter dem Header */
         }
 
         ul {
@@ -115,15 +114,16 @@
             font-size: 18px;
         }
 
-        @keyframes fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
-        @keyframes sway {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(20px); }
+        footer a:hover {
+            text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
@@ -157,22 +157,6 @@
     <a href="https://raffaelbauer.github.io/Datenschutzbestimmungen/">Datenschutzbestimmungen</a> | 
     <a href="https://raffaelbauer.github.io/Impressum/">Impressum</a>
 </footer>
-
-<script>
-    function createSnowflake() {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.style.left = Math.random() * window.innerWidth + 'px';
-        snowflake.style.width = snowflake.style.height = Math.random() * 10 + 5 + 'px'; // Unterschiedliche Schneeflockengröße
-        snowflake.style.animationDuration = Math.random() * 3 + 5 + 's'; // Unterschiedliche Fallgeschwindigkeiten
-        document.body.appendChild(snowflake);
-
-        // Entferne Schneeflocke, nachdem sie gefallen ist
-        setTimeout(() => snowflake.remove(), 10000);
-    }
-
-    setInterval(createSnowflake, 200); // Alle 200ms eine neue Schneeflocke
-</script>
 
 </body>
 </html>
